@@ -41,7 +41,7 @@ const EditProfile = () => {
 
     try {
       await updateProfile(formData);
-      navigate("/profile"); // Redirect to profile page after successful update
+      navigate('/profile/${user.id}'); // Redirect to profile page after successful update
     } catch (error) {
       console.error("Error updating profile:", error.message);
     } finally {
